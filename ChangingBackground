@@ -1,0 +1,18 @@
+using System;
+
+public class empty {
+    public static void main(string[] args) {
+
+        Console.BackgroundColor = ConsoleColor.Black;
+        Console.ForegroundColor = ConsoleColor.Green;
+        Console.Clear();
+        //Console.WriteLine("Hello world");
+        int a;
+        Console.Write("Enter A Number : ");
+        a = Convert.ToInt32(Console.ReadLine());
+        // a= int.Parse(Console.ReadLine());
+        Console.WriteLine("Entered Number Is : " + a);
+        Console.ReadKey();
+    }
+}
+
