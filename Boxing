@@ -1,0 +1,17 @@
+using System;
+
+public class Boxing {
+    public static void main(String[] args) 
+    {
+        int a = 10;
+        object obj;
+
+        obj = a;//boxing
+        Console.WriteLine("Boxing Completed :" + obj);
+
+        int b = (int)obj; // unboxing 
+        Console.WriteLine("UnBoxing Completed :" + b);
+
+        Console.ReadKey();
+    }
+}
