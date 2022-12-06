@@ -1,0 +1,22 @@
+//wap to get value & size from user and total of all values in 1 dimantion;
+
+using System;
+
+class Defi1 {
+    public static void main(String[] args)
+    {
+        Console.Write("Enter Array Size: ");
+        int count = Convert.ToInt32(Console.ReadLine());
+        int[] arr = new int[count];
+        int total = 0;
+
+        for (int i = 0; i < count; i++)
+        {
+            Console.WriteLine("Enter Array Value " + i + " : ");
+            arr[i] = Convert.ToInt32(Console.ReadLine());
+            total += arr[i];
+        }
+        Console.WriteLine("Total Of All Value = " + total);
+        Console.ReadKey();
+    }
+}
