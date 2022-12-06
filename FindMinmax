@@ -1,0 +1,26 @@
+using System;
+
+public class Minmax {
+    public static void main(String[] args) {
+        int a, b;
+        Console.WriteLine("Enter First Value : ");
+        a = int.Parse(Console.ReadLine());
+
+        Console.WriteLine("Enter Secound Value : ");
+        b = int.Parse(Console.ReadLine());
+
+        if (a == b)
+        {
+            Console.WriteLine("Both Are Equal");
+        }
+        else if(a > b)
+        {
+            Console.WriteLine("a is max");
+        }
+        else if (b > a)
+        {
+            Console.WriteLine("b is max");
+        }
+        Console.ReadKey();
+    }
+}
