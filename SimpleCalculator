@@ -1,0 +1,88 @@
+//wap to get value & size from user and total of all values in 1 dimantion;
+
+using System;
+
+
+class Defi2
+{
+    public static void Main(String[] args)
+    {
+
+        Console.Write("Enter Array Size: ");
+        int count = Convert.ToInt32(Console.ReadLine());
+        int[,] arr = new int[count, count];
+        int sum = 0 , subtraction = 0 , mul = 1 , div = 1;
+
+        for (int i = 0; i < count; i++)
+        {
+            for (int j = 0; j < count; j++)
+            {
+                Console.Write("Enter Array Value " + i + "" + j + ": ");
+                arr[i, j] = Convert.ToInt32(Console.ReadLine());
+            }
+        }
+
+        foreach (int t in arr)
+        {
+            Console.WriteLine(t);
+        }
+        Console.WriteLine("Enter Number \t 0 = Exit \n \t 1 = Addition \n\t 2 = Substraction \n\t 3 = Multiplication \n\t 4 = Division");
+        int a = Convert.ToInt32(Console.ReadLine());
+
+            switch (a)
+            {
+
+                case 0:
+                    Console.WriteLine("\n Exit ");
+                    Environment.Exit(0);
+                    break;
+
+                case 1:
+                    for (int i = 0; i < count; i++)
+                    {
+                        for (int j = 0; j < count; j++)
+                        {
+                            sum += arr[i,j];   
+                        }
+                    }
+                    Console.WriteLine("The Addition Of all Numbers = " + sum);
+                    break;
+
+                case 2:
+                    for (int i = 0; i < count; i++)
+                    {
+                        for (int j = 0; j < count; j++)
+                        {
+                            subtraction -= arr[i,j];   
+                        }
+                    }
+                    Console.WriteLine("The Subtraction Of all Numbers = " + subtraction);
+                    break;
+
+                case 3:
+                    for (int i = 0; i < count; i++)
+                    {
+                        for (int j = 0; j < count; j++)
+                        {
+                            mul *= arr[i,j];   
+                        }
+                    }
+                    Console.WriteLine("The Multiplication Of all Numbers = " + mul);
+                    break;
+                case 4:
+                    for (int i = 0; i < count; i++)
+                    {
+                        for (int j = 0; j < count; j++)
+                        {
+                            div /= arr[i, j]; 
+                        }
+                    }
+                    Console.WriteLine("The Division Of all Numbers = " + div);
+                    break;
+                default:
+                    Console.WriteLine("Invalid Entry");
+                    break;
+            }
+            Console.ReadKey();
+    }
+}
